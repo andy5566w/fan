@@ -7,17 +7,18 @@
 
 .container {
   background-image: url("./background.png");
-  width: 100%;
-  height: 100vh;
+  background-size: contain;
+  width: 1440px;
+  height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  --block-width: 740px;
-  --block-height: 255px;
-  --block-left: 440px;
-  --block-top: 140px;
-  --wrapper-width: 143px;
+  --block-width: 555px;
+  --block-height: 195px;
+  --block-left: 330px;
+  --block-top: 100px;
+  --wrapper-width: 105px;
 }
 
 .container .block {
@@ -35,16 +36,16 @@
 }
 
 .container .block:nth-of-type(2) {
-  --block-left: calc(440px + var(--block-width));
+  --block-left: calc(330px + var(--block-width));
 }
 
 .container .block:nth-of-type(3) {
-  --block-top: calc(145px + var(--block-height));
+  --block-top: calc(100px + var(--block-height));
 }
 
 .container .block:nth-of-type(4) {
-  --block-top: calc(145px + var(--block-height));
-  --block-left: calc(440px + var(--block-width));
+  --block-top: calc(100px + var(--block-height));
+  --block-left: calc(330px + var(--block-width));
 }
 
 .container .wrapper {
