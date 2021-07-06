@@ -1,7 +1,23 @@
 const mop_up_dom = document.querySelectorAll('[data-mop-up]')
-let is_run = true
-console.log(mop_up_dom)
-mop_up_dom.forEach(dom => dom.classList.add('run'))
+const delays = ['delay-1', 'delay-2', 'delay-3', 'delay-4']
+const second = 2800
+let is_reverse = true
+
+const animation = (is_reverse = false) => {
+    const _delays = is_reverse ? delays.reverse() : delays
+    mop_up_dom.forEach((dom, index) => {
+        dom.classList.add(_delays[index])
+        setTimeout(() => {
+            dom.classList.remove(_delays[index])
+        }, second - 100)
+    })
+}
+
+animation()
+mop_up_dom.forEach((dom) => dom.classList.toggle('run'))
 setInterval(() => {
-  mop_up_dom.forEach(dom => dom.classList.toggle('run'))
-}, 2500)
+    animation(is_reverse)
+    mop_up_dom.forEach((dom) => dom.classList.toggle('run'))
+    mop_up_dom.forEach((dom) => dom.classList.toggle('run-reverse'))
+    is_reverse = !is_reverse
+}, second)

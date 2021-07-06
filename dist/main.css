@@ -186,7 +186,6 @@
   opacity: 0;
   border-radius: 50%;
   overflow: hidden;
-  background: radial-gradient(circle at center, blue, rgba(0, 0, 255, 0.1));
   width: var(--wrapper-width);
   height: var(--wrapper-width);
   -webkit-clip-path: polygon(40% 60%, 60% 60%, 75% 100%, 25% 100%);
@@ -196,8 +195,15 @@
 }
 
 .container .wrapper .linear_color.run {
-  -webkit-animation: rotate 0.5s alternate forwards var(--delay);
-          animation: rotate 0.5s alternate forwards var(--delay);
+  background: radial-gradient(circle at center, blue, rgba(0, 0, 255, 0.1));
+  -webkit-animation: rotate 0.7s alternate forwards var(--delay);
+          animation: rotate 0.7s alternate forwards var(--delay);
+}
+
+.container .wrapper .linear_color.run-reverse {
+  background: radial-gradient(circle at center, red, rgba(255, 0, 0, 0.1));
+  -webkit-animation: rotateReverse 0.7s alternate forwards var(--delay);
+          animation: rotateReverse 0.7s alternate forwards var(--delay);
 }
 
 .delay-1 {
@@ -384,6 +390,74 @@
   }
   100% {
     --rotate-deg: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotateReverse {
+  0% {
+    opacity: 1;
+  }
+  12.5% {
+    --rotate-deg: rotate(-45deg);
+  }
+  25% {
+    --rotate-deg: rotate(-90deg);
+  }
+  37.5% {
+    --rotate-deg: rotate(-135deg);
+  }
+  50% {
+    --rotate-deg: rotate(-180deg);
+  }
+  62.5% {
+    --rotate-deg: rotate(-225deg);
+  }
+  75% {
+    --rotate-deg: rotate(-270deg);
+  }
+  87.5% {
+    --rotate-deg: rotate(-315deg);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    --rotate-deg: rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateReverse {
+  0% {
+    opacity: 1;
+  }
+  12.5% {
+    --rotate-deg: rotate(-45deg);
+  }
+  25% {
+    --rotate-deg: rotate(-90deg);
+  }
+  37.5% {
+    --rotate-deg: rotate(-135deg);
+  }
+  50% {
+    --rotate-deg: rotate(-180deg);
+  }
+  62.5% {
+    --rotate-deg: rotate(-225deg);
+  }
+  75% {
+    --rotate-deg: rotate(-270deg);
+  }
+  87.5% {
+    --rotate-deg: rotate(-315deg);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    --rotate-deg: rotate(-360deg);
     opacity: 0;
   }
 }
