@@ -15,7 +15,7 @@ const animation = (is_reverse = false) => {
 
 animation()
 mop_up_dom.forEach(dom => dom.classList.toggle('run'))
-setInterval(function() {
+setInterval(() => {
   animation(is_reverse)
   mop_up_dom.forEach(dom => dom.classList.toggle('run'))
   mop_up_dom.forEach(dom => dom.classList.toggle('run-reverse'))
