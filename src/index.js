@@ -4,20 +4,20 @@ const second = 2800
 let is_reverse = true
 
 const animation = (is_reverse = false) => {
-    const _delays = is_reverse ? delays.reverse() : delays
-    mop_up_dom.forEach((dom, index) => {
-        dom.classList.add(_delays[index])
-        setTimeout(() => {
-            dom.classList.remove(_delays[index])
-        }, second - 100)
-    })
+  const _delays = is_reverse ? delays.reverse() : delays
+  mop_up_dom.forEach((dom, index) => {
+    dom.classList.add(_delays[index])
+    setTimeout(() => {
+      dom.classList.remove(_delays[index])
+    }, second - 100)
+  })
 }
 
 animation()
-mop_up_dom.forEach((dom) => dom.classList.toggle('run'))
-setInterval(() => {
-    animation(is_reverse)
-    mop_up_dom.forEach((dom) => dom.classList.toggle('run'))
-    mop_up_dom.forEach((dom) => dom.classList.toggle('run-reverse'))
-    is_reverse = !is_reverse
+mop_up_dom.forEach(dom => dom.classList.toggle('run'))
+setInterval(function() {
+  animation(is_reverse)
+  mop_up_dom.forEach(dom => dom.classList.toggle('run'))
+  mop_up_dom.forEach(dom => dom.classList.toggle('run-reverse'))
+  is_reverse = !is_reverse
 }, second)
