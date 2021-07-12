@@ -20,4 +20,5 @@ setInterval(() => {
   mop_up_dom.forEach(dom => dom.classList.toggle('run'))
   mop_up_dom.forEach(dom => dom.classList.toggle('run-reverse'))
   is_reverse = !is_reverse
+  const a = 1
 }, second)
