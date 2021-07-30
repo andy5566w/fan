@@ -66,17 +66,27 @@ function draw(canvas, is_reverse = false) {
 
 function drawerCircle({ ctx, deg, is_reverse = false }) {
   ctx.clearRect(0, 0, blockWidth, blockWidth)
-  const angle1 = 0
+  let angle1 = is_reverse
+    ? deg < -180
+      ? (deg + 180) * DegToPI
+      : 0
+    : deg > 180
+    ? (deg - 180) * DegToPI
+    : 0
+
   const angle2 = deg * DegToPI
 
   ctx.save()
   ctx.beginPath()
   ctx.translate(blockWidth / 2, blockWidth / 2)
-  // ctx.rotate(0.5 * Math.PI)
+  ctx.moveTo(0, 0)
   ctx.fillStyle = '#9B59B6'
+  ctx.strokeStyle = 'blue'
+  ctx.lineWidth = 5
   ctx.arc(0, 0, blockWidth / 2, angle1, angle2, is_reverse)
   ctx.lineTo(0, 0)
   ctx.fill()
+  ctx.stroke()
   ctx.closePath()
   ctx.restore()
 }
