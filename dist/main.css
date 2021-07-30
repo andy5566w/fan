@@ -142,6 +142,8 @@
 .container .wrapper .filter_blur {
   -webkit-filter: blur(14px);
           filter: blur(14px);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
 }
 
 .container .wrapper .circle {

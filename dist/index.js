@@ -81,7 +81,7 @@ function drawerCircle({ ctx, deg, is_reverse = false }) {
   ctx.translate(blockWidth / 2, blockWidth / 2)
   ctx.moveTo(0, 0)
   ctx.fillStyle = '#9B59B6'
-  ctx.strokeStyle = 'blue'
+  ctx.strokeStyle = '#3498DB'
   ctx.lineWidth = 5
   ctx.arc(0, 0, blockWidth / 2, angle1, angle2, is_reverse)
   ctx.lineTo(0, 0)
