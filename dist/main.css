@@ -139,6 +139,11 @@
           filter: blur(50px);
 }
 
+.container .wrapper .filter_blur {
+  -webkit-filter: blur(14px);
+          filter: blur(14px);
+}
+
 .container .wrapper .circle {
   width: var(--wrapper-width);
   height: var(--wrapper-width);
@@ -204,6 +209,11 @@
   background: radial-gradient(circle at center, red, rgba(255, 0, 0, 0.1));
   -webkit-animation: rotateReverse 0.7s alternate forwards var(--delay);
           animation: rotateReverse 0.7s alternate forwards var(--delay);
+}
+
+.container .wrapper .runway {
+  width: var(--wrapper-width);
+  height: var(--wrapper-width);
 }
 
 .delay-1 {
