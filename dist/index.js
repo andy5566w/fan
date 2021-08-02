@@ -48,7 +48,7 @@ function draw(canvas, is_reverse = false) {
   const ctx = canvas.getContext('2d')
 
   function run() {
-    const deg = (timer * 20) / 3
+    const deg = (timer * 25) / 2
 
     if (is_reverse) timer--
     else timer++
