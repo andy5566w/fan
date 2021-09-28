@@ -1,6 +1,6 @@
 const mop_up_dom = document.querySelectorAll('[data-mop-up]')
 const delays = ['delay-1', 'delay-2', 'delay-3', 'delay-4']
-const second = 2800
+const second = 2801
 let is_reverse = true
 
 const animation = (is_reverse = false) => {
